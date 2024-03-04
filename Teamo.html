@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación al Cine</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff; /* Azul claro para el fondo */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column; /* Ajusta el diseño a columna para colocar la imagen y el formulario verticalmente */
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h2 {
+            color: #333; /* Color de texto oscuro */
+            text-align: center;
+            margin-bottom: 20px; /* Espaciado inferior */
+        }
+
+        img {
+            width: 300px; /* Ajusta el ancho de la imagen según tus preferencias */
+            margin-bottom: 20px; /* Espaciado inferior */
+        }
+
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        label {
+            font-size: 18px;
+            color: #333; /* Color de texto oscuro */
+            margin-right: 10px;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            font-size: 16px;
+            padding: 8px 16px;
+            background-color: #87CEEB; /* Azul claro para el botón */
+            color: #fff; /* Texto blanco en el botón */
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #4682B4; /* Cambio de color al pasar el ratón sobre el botón */
+        }
+    </style>
+</head>
+
+<body>
+
+    <img src=""C:\Users\Luis Miguel\Downloads\stich enamorado.jpg"" alt="Imagen de invitación al cine">
+
+    <form>
+        <h2>¿Quieres ir al cine conmigo?</h2>
+
+        <label for="opcionSi">Sí</label>
+        <input type="radio" id="opcionSi" name="respuesta" value="si">
+
+        <label for="opcionNo">No</label>
+        <input type="radio" id="opcionNo" name="respuesta" value="no">
+
+        <br>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Obtener el valor seleccionado
+            var respuesta = document.querySelector('input[name="respuesta"]:checked');
+
+            // Mostrar mensajes adicionales según la respuesta
+            if (respuesta) {
+                if (respuesta.value === 'no') {
+                    alert('Segura? Yo creo que te equivocaste');
+                } else if (respuesta.value === 'si') {
+                    alert('Te amo mucho, mi reina hermosa. Dime qué día puedes.');
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
+
+
